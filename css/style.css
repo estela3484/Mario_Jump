@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+ }
+
+.game-board{
+    background: linear-gradient(#3491cb, #b3b3b3);
+    width:100%;
+    height:500px;
+    border-bottom:30px solid rgb(78, 216, 3);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width:70px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.nuvens{
+    position: absolute;
+    bottom: 300px;
+    width:90px;
+    animation: pipe-animation 2.5s infinite linear;
+}
+.heroi{
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+}
+.jump{
+    animation: jump 500ms ease-out;  /*quando quiser que o mario pule , utilizar a class jump*/
+}
+
+@keyframes pipe-animation {
+    from{
+        right:0; /*a animação inicia do lado direito */
+    }
+    to{
+        right: 100%; /* a animação se locomove para o lado esquerdo */
+    }
+}
+
+@keyframes jump{
+    
+    0%{
+        bottom:0;
+    }
+    40%{
+        bottom:180px;
+    }
+    50%{
+        bottom:180px;
+    }
+    60%{
+        bottom:180px;
+    }
+    100%{
+        bottom:0;
+    }
+
+}
